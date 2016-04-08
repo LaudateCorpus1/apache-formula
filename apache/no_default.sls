@@ -7,7 +7,7 @@ include:
 
 apache_no-default-vhost:
   file.absent:
-    - name: {{ apache.vhostdir }}/000-default.conf
+    - name: /etc/apache2/sites-enabled/000-default.conf
     - require:
       - pkg: apache
     - watch_in:
